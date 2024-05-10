@@ -1,8 +1,3 @@
-interface IRating {
-  Source: string;
-  Value: string;
-}
-
 export interface MovieDto {
   Title: string;
   Year: string;
@@ -18,7 +13,10 @@ export interface MovieDto {
   Country: string;
   Awards: string;
   Poster: string;
-  Ratings: IRating[];
+  Ratings: {
+    Source: string;
+    Value: string;
+  }[];
   Metascore: string;
   ImdbRating: string;
   ImdbVotes: string;
