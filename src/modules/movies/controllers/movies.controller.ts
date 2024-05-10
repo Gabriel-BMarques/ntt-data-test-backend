@@ -8,7 +8,7 @@ export class MoviesController {
   constructor(private readonly moviesService: MoviesService) {}
 
   @Get('search')
-  async handle(@Query() searchMovieDto: SearchMovieDto): Promise<MovieDto> {
-    return this.moviesService.execute(searchMovieDto.title);
+  async search(@Query() searchMovieDto: SearchMovieDto): Promise<MovieDto> {
+    return this.moviesService.searchMovie(searchMovieDto.title);
   }
 }

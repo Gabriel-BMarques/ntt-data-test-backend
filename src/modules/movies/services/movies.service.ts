@@ -5,7 +5,7 @@ import { ApiService } from 'src/modules/shared/services/api/api.service';
 export class MoviesService {
   constructor(private readonly apiService: ApiService) {}
 
-  async execute(title: string) {
+  async searchMovie(title: string) {
     return this.apiService.searchMovie(title);
   }
 }
